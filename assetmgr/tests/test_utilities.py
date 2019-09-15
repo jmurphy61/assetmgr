@@ -1,0 +1,1 @@
+__package__ = "assetmgr.tests"

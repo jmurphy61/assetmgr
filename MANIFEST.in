@@ -1,0 +1,3 @@
+include MANIFEST.in
+graft assetmgr/resources
+prune assetmgr/tests
