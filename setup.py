@@ -12,6 +12,9 @@ KEYWORDS = [
     "inventory",
     "manager"
 ]
+INSTALL_REQUIRES = [
+    "datakick"
+]
 LATEST_PYTHON_VERSION = (3, 7)
 REQUIRED_PYTHON_VERSION = (3, 6) # for f strings
 CURRENT_PYTHON_VERSION = sys.version_info[:2]
@@ -63,7 +66,7 @@ setuptools.setup(
     license=LICENSE,
     classifiers=CLASSIFIERS,
     python_requires=">={}.{}".format(*REQUIRED_PYTHON_VERSION),
-    install_requires=[],
+    install_requires=INSTALL_REQUIRES,
     entry_points={
         "console_scripts": [
             f"{NAME}={NAME}.__main__:main"
