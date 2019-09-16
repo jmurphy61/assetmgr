@@ -1,4 +1,4 @@
-import importlib, logging, mock, optparse, time, pdb
+import logging, mock, optparse, pdb
 from requests.exceptions import HTTPError
 from source.infrastructure import *
 from unittest import TestCase, main
@@ -33,7 +33,6 @@ class TestItem(TestCase):
         
         mock_datakick.find_product.assert_called_with(None)
     
-
         gtin14 = '00000000000000'
         item = Item(gtin14=gtin14)
         mock_datakick.find_product.assert_called_with(gtin14)
