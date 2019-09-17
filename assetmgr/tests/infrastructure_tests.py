@@ -1,6 +1,6 @@
 import logging, mock, optparse, pdb
 from requests.exceptions import HTTPError
-from source.infrastructure import *
+from ..source.infrastructure import Database, Item
 from unittest import TestCase, main
 
 class TestDatabase(TestCase):
@@ -36,6 +36,7 @@ class TestItem(TestCase):
         gtin14 = '00000000000000'
         item = Item(gtin14=gtin14)
         mock_datakick.find_product.assert_called_with(gtin14)
+        self.assertIsInstance(item, Item)
     
     def tearDown(self):
         logging.debug("infrastructure.Database TestCase complete.")

@@ -1,4 +1,5 @@
-import argparse, logging, os, sys, tests, unittest
+import argparse, logging, os, sys, unittest
+from .assetmgr import tests
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog="Test Suite", description="Run specified tests.")
