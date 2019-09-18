@@ -1,7 +1,6 @@
-import argparse, logging, os, sys, unittest
-from .assetmgr import tests
+import argparse, logging, os, source, sys, tests, unittest
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(prog="Test Suite", description="Run specified tests.")
     parser.add_argument("-l", "--logging-level", type=str,
                         help="Desired logging level: debug, info, warning, error, critical")
@@ -37,3 +36,6 @@ if __name__ == "__main__":
             test_count += 1
 
     logging.debug(f"{test_count} test suites complete.\n\n")
+
+if __name__ == "__main__":
+    main()
